@@ -1,0 +1,30 @@
+//This program counts number of words in text file
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	ifstream text_file;
+	text_file.open("dear aman.txt");
+
+	string word;
+	int word_counter = 0;
+
+	while (!text_file.eof()) 
+	{
+		text_file >> word;
+		word_counter++;
+	}
+
+	cout << "Number of words found in file are: " << word_counter << endl;
+
+	if (word_counter > 0) 
+	{
+		cout << "Thank you for the challenge, Aman. I'm now ready for challenge number two.\n";
+	}
+	return 0;
+}
